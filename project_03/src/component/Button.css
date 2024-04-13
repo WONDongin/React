@@ -1,0 +1,4 @@
+.Button {cursor: pointer; border: none; border-radius: 5px; padding: 10px 20px; font-size: 18px; white-space: nowrap; font-family: "Orbit"; font-weight: 700; letter-spacing: -0.05rem;}
+.Button_default {background-color: #ececec; color: #000;}
+.Button_positive{background-color: #64c964; color: #fff;}
+.Button_negative { background-color: #fd565f; color: #fff}

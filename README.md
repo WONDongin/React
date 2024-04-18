@@ -63,11 +63,20 @@ chapter_09 : 컴포넌트 트리에 데이터 공급하기(Context/useContext)
 
 <br/>
 
+chapter_10 : 웹 스토리지 이용
+<br/>
+
+- https://intriguing-longship-9f1.notion.site/6466e7a45c34419794a7b9472fe6e862?pvs=4
+
+<br/>
+
 Project_01 : 카운터 앱 만들기
 <br/>
 -
 
 - https://intriguing-longship-9f1.notion.site/P_01-Counter-App-5e1f0bfa5ba94e40b606f7afbc14082b?pvs=4
+
+<br/>
 
 Project_02 : 할 일 관리 앱 만들기
 <br/>
@@ -75,3 +84,10 @@ Project_02 : 할 일 관리 앱 만들기
 
 - https://intriguing-longship-9f1.notion.site/P_02-Todo-List-54dc2a7f59dd4fd5bc0ffc218f9b778f?pvs=4
 
+<br/>
+
+Project_03 : 감정 일기장
+<br/>
+-
+
+- https://intriguing-longship-9f1.notion.site/P_03-751ec3c5a63942ac84f1eaab1f60105a?pvs=4

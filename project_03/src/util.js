@@ -38,7 +38,7 @@ export const getFormattedDate = (targetDate) => {
 export const emotionList = [
     {
         id: 1,
-        name: "그럭저럭",
+        name: "좋음",
         img: getElementById(1),
     },
     {
@@ -48,12 +48,12 @@ export const emotionList = [
     },
     {
         id: 3,
-        name: "신경 예민",
+        name: "예민",
         img: getElementById(3),
     },
     {
         id: 4,
-        name: "욕이나옴",
+        name: "최악",
         img: getElementById(4),
     },
     {

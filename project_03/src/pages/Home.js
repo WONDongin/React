@@ -3,7 +3,7 @@ import Button from "../component/Button";
 import Header from "../component/Header";
 import DiaryList from "../component/DiaryList";
 import { useContext, useEffect, useState } from "react";
-import {getMonthRangeByDate} from "../util";
+import {setPageTitle, getMonthRangeByDate} from "../util";
 
 
 const Home = () => {
@@ -30,6 +30,10 @@ const Home = () => {
             setFilteredData([]);
         }
     }, [data, pivotDate]);
+
+    useEffect(() => {
+            setPageTitle("WDI_감정 일기장");
+    }, []);
 
     return(
         <div>

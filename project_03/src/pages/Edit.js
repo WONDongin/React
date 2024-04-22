@@ -3,13 +3,18 @@ import useDiary from "../hooks/useDiary";
 import Header from "../component/Header";
 import Button from "../component/Button";
 import Editor from "../component/Editor";
-import  {useContext} from "react";
+import  {useContext, useEffect} from "react";
 import {DiaryDispatchContext} from "../App";
+import { setPageTitle } from "../util";
 
 const Edit = () => {
     const {id} = useParams();
     const data = useDiary(id);
     const navigate = useNavigate();
+    
+    useEffect(() => {
+        setPageTitle(`WDI_${id}번 일기 수정`);
+    });
 
     const goBack = () => {
         navigate(-1);

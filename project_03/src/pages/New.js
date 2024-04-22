@@ -3,9 +3,14 @@ import Button from "../component/Button";
 import Editor from "../component/Editor";
 import {useNavigate} from "react-router-dom"
 import  {DiaryDispatchContext} from "../App";
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
+import { setPageTitle } from "../util";
 
 const New = () => {
+    useEffect(() => {
+        setPageTitle("WDI_새 일기 쓰기");
+    }, []);
+
     const { onCreate } = useContext(DiaryDispatchContext);
     const navigate = useNavigate();
     const goBack = () => {

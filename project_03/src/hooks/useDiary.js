@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { DiaryStateContext } from "../App";
 import { useNavigate } from "react-router-dom";
-import Home from "../pages/Home";
 
 const useDiary = (id) => {
     const data = useContext(DiaryStateContext);

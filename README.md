@@ -70,6 +70,13 @@ chapter_10 : 웹 스토리지 이용
 
 <br/>
 
+chapter_11 : 배포(파이어베이스)
+<br/>
+
+- https://intriguing-longship-9f1.notion.site/f16c059808b24161afd402422144d147?pvs=4
+
+<br/>
+
 Project_01 : 카운터 앱 만들기
 <br/>
 -

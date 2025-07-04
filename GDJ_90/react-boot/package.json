@@ -1,5 +1,5 @@
 {
-  "name": "react-app3",
+  "name": "react-boot",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,9 +9,11 @@
     "@testing-library/user-event": "^13.5.0",
     "dayjs": "^1.11.13",
     "react": "^19.1.0",
+    "react-cookie": "^8.0.1",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3",
     "react-scripts": "5.0.1",
+    "react-toastify": "^11.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

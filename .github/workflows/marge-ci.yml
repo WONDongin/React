@@ -1,0 +1,54 @@
+name: Marge-ci
+
+on:
+  pull_request:
+    branches: [main] # main 브랜치 PR시 작동
+
+jobs:
+  frontend:
+    name: React (Next.js) Build & Test # 프론트엔드 작업 이름
+    runs-on: ubuntu-latest #  우분투 서버 사용
+
+    steps:
+      - uses: actions/checkout@v3 # 저장소 코드 체크아웃
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3 # Node.js 설치(18버전 사용)
+        with:
+          node-version: "18"
+
+      - name: Install Frontend # 프론트 패키지 설치
+        run: npm install
+        working-directory: ./frontend # 프론트 디렉토리
+
+      - name: Run Frontend Tests # 테스트 실행
+        run: npm test
+        working-directory: ./frontend
+
+  backend:
+    name: Spring Boot Build & Test # 백엔드 작업 이름
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3 # 저장소 코드 가져오기
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3 # Java 설치
+        with:
+          distribution: "temurin" # 자바 배포판 (OpenJDK)
+          java-version: "17"
+
+      - name: Build & Test Spring Boot # Gradle 빌드 및 테스트
+        run: ./gradlew build
+        working-directory: ./backend # 백엔드 디렉토리 기준
+
+  docker:
+    name: Docker Build Check # Docker 이미지 빌드 테스트
+    runs-on: ubuntu-latest
+    needs: [frontend, backend] # 프론트와 백 성공 후 실행
+
+    steps:
+      - uses: actions/checkout@v3 # 코드 체크아웃
+
+      - name: Build Docker Image
+        run: docker build -t my-app:latest . # Dockerfile 기반 이미지 빌드
